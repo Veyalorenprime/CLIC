@@ -62,38 +62,6 @@ An **HSIC penalty** enforces that `z` is statistically independent of `a`, ensur
     └── test_circuits.py
 ```
 
----
-
-## Installation
-
-```bash
-git clone https://github.com/your-username/clic.git
-cd clic
-pip install -r requirements.txt
-pip install -e .
-```
-
----
-
-## Data
-
-Place the four PV CSV files in `data/`:
-
-```
-data/
-├── normal_data_engineered_new.csv
-├── anomaly_data_no_soiling_engineered_new.csv
-├── anomaly_data_soiling_100_no_degradation_engineered_new.csv
-└── anomaly_data_soiling_100_engineered_new.csv
-```
-
-Then split the normal data:
-
-```bash
-python scripts/prepare_pv_data.py
-```
-
----
 
 ## Training
 
