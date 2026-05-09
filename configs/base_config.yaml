@@ -1,0 +1,45 @@
+seed: 42
+
+model:
+  main_dim: 5        # Electrical: dc_power, v_mp, i_mp, v_oc, i_sc
+  cond_dim: 8        # Environmental: irradiance, temperature, seasonal, etc.
+  seq_len: 12
+  hidden_dim: 64
+  latent_dim: 2     
+  num_flows: 4
+  num_lstm_layers: 2
+  scale_limit: 0.5
+  dropout: 0.0
+
+loss:
+  lambda_recon: 1.0
+  lambda_hsic: 0.01    # z vs x_cond independence
+  lambda_nll: 0.1
+
+training:
+  batch_size: 128
+  learning_rate: 0.0001
+  weight_decay: 0.001
+  gradient_clip: 1.0
+  epochs: 100
+  flow_epochs: 50
+  early_stopping_patience: 20
+
+logging:
+  use_wandb: false
+  save_dir: experiments
+
+data:
+  data_dir: data
+  seq_len: 12
+  num_workers: 4
+  filter_daytime: true
+  daytime_threshold: 0.01
+
+  train_files:
+  - - processed/splits/normal_train.csv
+    - 0
+
+  val_files:
+  - - processed/splits/normal_val.csv
+    - 0

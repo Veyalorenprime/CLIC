@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.hypothesis/
+.pytest_cache/
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb_checkpoints
+*.ipynb
+
+# Experiments & Data
+experiments/
+data/
+*.pt
+*.pth
+*.ckpt
+*.pkl
+wandb/
+.neptune/
+lightning_logs/
+
+# Claude Code
+.claude/
+
+# Build artifacts
+clic.egg-info/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Virtual environments
+venv/
+ENV/
+.venv
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+*.egg-info/
+dist/
+build/

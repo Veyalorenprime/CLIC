@@ -1,0 +1,22 @@
+# Core dependencies
+torch==2.11.0
+torchvision
+
+numpy<2.0
+scipy
+matplotlib
+seaborn
+pandas
+scikit-learn
+pyyaml
+tqdm
+
+# Optional
+wandb
+tensorboard
+
+# Dev
+pytest
+black
+flake8
+mypy
